@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio 3</title>
+</head>
+<body>
+    <header>
+        <h1>Registro a Conferencia Anual</h1>
+        <p>Complete el siguiente formulario en HTML plano para reservar su lugar.</p>
+    </header>
+
+    <main>
+        <form action="respuesta-formulario.html" method="POST">
+
+            <fieldset>
+                <legend>Información General</legend>
+
+                <p>
+                    <label for="nombres">Nombres:</label><br>
+                    <input type="text" id="nombres" name="nombres" placeholder="Ingrese sus nombres">
+                </p>
+
+                <p>
+                    <label for="pass">Clave de acceso (crear nueva):</label><br>
+                    <input type="password" id="pass" name="pass" placeholder="Mínimo 8 caracteres">
+                </p>
+
+                <input type="hidden" name="tipo_usuario" value="asistente_estandar">
+
+                <p>
+                    <label for="estado_cuenta">Estado de la cuenta:</label><br>
+                    <input type="text" id="estado_cuenta" name="estado_cuenta" value="Pendiente de pago" disabled>
+                </p>
+
+                <p>
+                    <label for="id_ticket">ID de Ticket asignado:</label><br>
+                    <input type="text" id="id_ticket" name="id_ticket" value="CONF-2026-998" readonly>
+                </p>
+
+                <p>
+                    <label for="fecha_llegada">Fecha de llegada:</label><br>
+                    <input type="date" id="fecha_llegada" name="fecha_llegada">
+                </p>
+
+                <p>
+                    <label for="hora_checkin">Hora estimada de check-in:</label><br>
+                    <input type="time" id="hora_checkin" name="hora_checkin">
+                </p>
+
+                <p>
+                    <label for="color_credencial">Color de credencial deseado:</label><br>
+                    <input type="color" id="color_credencial" name="color_credencial" value="#ff5733">
+                </p>
+
+                <p>
+                    <label for="continente">Continente de origen:</label><br>
+                    <select id="continente" name="continente">
+                        <option value="">-- Seleccione --</option>
+                        <option value="america">América</option>
+                        <option value="europa">Europa</option>
+                        <option value="asia">Asia</option>
+                        <option value="africa">África</option>
+                        <option value="oceania">Oceanía</option>
+                    </select>
+                </p>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>Preferencias del Evento</legend>
+
+                <p>
+                    <strong>Talleres a los que asistirá (Checkboxes - Seleccione varios):</strong><br>
+                    <input type="checkbox" id="taller_ia" name="talleres" value="IA">
+                    <label for="taller_ia">Inteligencia Artificial</label><br>
+
+                    <input type="checkbox" id="taller_web" name="talleres" value="Desarrollo Web">
+                    <label for="taller_web">Desarrollo Web</label><br>
+
+                    <input type="checkbox" id="taller_ux" name="talleres" value="UX/UI">
+                    <label for="taller_ux">Diseño UX/UI</label>
+                </p>
+
+                <p>
+                    <strong>Tipo de alimentación (Botones de Radio - Seleccione solo uno):</strong><br>
+                    <input type="radio" id="dieta_regular" name="dieta" value="Regular" checked>
+                    <label for="dieta_regular">Regular</label><br>
+
+                    <input type="radio" id="dieta_veg" name="dieta" value="Vegetariana">
+                    <label for="dieta_veg">Vegetariana</label><br>
+
+                    <input type="radio" id="dieta_cel" name="dieta" value="Celiaca">
+                    <label for="dieta_cel">Apta Celíacos</label>
+                </p>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>Datos de Contacto y Validación</legend>
+
+                <p>
+                    <label for="apellidos">Apellidos (Requerido):</label><br>
+                    <input type="text" id="apellidos" name="apellidos" required placeholder="Ingrese sus apellidos">
+                </p>
+
+                <p>
+                    <label for="correo">Correo electrónico principal (Requerido):</label><br>
+                    <input type="email" id="correo" name="correo" required placeholder="usuario@dominio.com">
+                </p>
+
+                <p>
+                    <label for="experiencia">Años de experiencia laboral (Números):</label><br>
+                    <input type="number" id="experiencia" name="experiencia" min="0" max="50" step="1" required placeholder="Ej: 5">
+                </p>
+
+                <p>
+                    <label for="donacion">Aporte voluntario en USD (Decimales):</label><br>
+                    <input type="number" id="donacion" name="donacion" min="5" step="0.50" placeholder="Ej: 10.50">
+                </p>
+
+                <p>
+                    <label for="linkedin">Perfil de LinkedIn (URL):</label><br>
+                    <input type="url" id="linkedin" name="linkedin" required placeholder="https://www.linkedin.com/in/usuario">
+                </p>
+
+                <p>
+                    <label for="celular">Teléfono Celular (Patrón específico):</label><br>
+                    <input type="tel" id="celular" name="celular" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" placeholder="Ej: 011-4444-5555" title="Debe tener el formato de 3 números, guion, 4 números, guion y 4 números." required>
+                </p>
+            </fieldset>
+
+            <br>
+
+            <p>
+                <button type="submit">Finalizar Registro</button>
+                <button type="reset">Borrar Formulario</button>
+            </p>
+
+        </form>
+    </main>
+</body>
+</html>
