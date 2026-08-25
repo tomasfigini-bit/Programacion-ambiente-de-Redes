@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2 - Selectores de Clase</title>
+    
+    <style>
+        /* El default para cualquier párrafo */
+        p { 
+            font-size: 1em;
+            margin-bottom: 60px;
+        }
+
+        /* Clase para resaltar con fondo amarillo y negrita */
+        .claseResaltado {
+            font-size: 1em;
+            font-weight: bold;
+            background-color: lightblue;
+        }
+
+        /* Clase para acotaciones (texto más pequeño, cursiva y gris) */
+        .claseAcotacion {
+            font-size: 0.85em;
+            font-style: italic;
+            color: blue;
+        }
+
+        /* Clase de ayuda (caja con borde naranja, texto centrado y en cursiva) */
+        .claseAyuda {
+            font-style: italic;
+            color: gold;
+            border: 1px solid gold;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Clase de contenido común (hereda el p por defecto) */
+        .claseContenidoComun {
+            /* No requiere atributos extra por ahora */
+        }
+
+        /* Selector de ID único */
+        #idUnico {
+            color: violet;
+            font-weight: bold;
+            font-style: italic;
+            border: 1px solid violet;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Clase para limitar imágenes al 50% del ancho de su contenedor */
+        .imagenAl50 {
+            width: 50%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Agregamos el título principal arriba de todo -->
+    <h1>Ejercicio 2</h1>
+
+    <p>A partir de esta página no usaremos más el atributo style en ninguna etiqueta.</p>
+    
+    <p>Todo el estilo aplicado en el documento será definido dentro de una etiqueta style como "clase", anidada en la etiqueta head del documento.</p>
+
+    <pre>
+p { /*El default para cualquier párrafo*/
+font-size: 1em;
+margin-bottom:60px;
+}
+    </pre>
+
+    <p>Todos los párrafos tienen un default como estilo que incluyen un margin-bottom para separarlos más entre ellos.</p>
+
+    <pre>
+.claseResaltado {
+font-size:1em;
+font-weight:bold;
+background-color: yellow;
+}
+    </pre>
+
+    <p>Este párrafo contiene un grupo de palabras delimitado por una etiqueta "span". El comienzo es aquí: <span class="claseResaltado">grupo de palabras destacadas con el estilo claseResaltado</span></p>
+
+    <p class="claseAcotacion">Este párrafo toma el estilo definido en la etiqueta style en el header del documento como class="claseAcotacion".</p>
+
+    <p class="claseResaltado">Este párrafo toma el estilo definido en la etiqueta style en el header del documento como class="claseResaltado"</p>
+
+    <p class="claseAyuda">Este párrafo toma el estilo definido en la etiqueta style en el header del documento como class="claseAyuda"</p>
+
+    <p class="claseContenidoComun">Este párrafo toma el estilo definido en la etiqueta style en el header del documento como class="claseContenidoComun"</p>
+
+    <p id="idUnico">Párrafo formateado por un estilo particular definido en el style del documento para un párrafo especifico id="idUnico". No se trata de un selector de clase sino de un selector de elemento "#"</p>
+
+    <p>Todas las imagenes con class="imagenAl50" en esta página se encuentran limitadas al 50% del ancho del contenedor mas allá de su tamaño real en pixeles:</p>
+
+    <!-- Imagen de la serie (acordate de que tu archivo se llame exactamente igual) -->
+    <img src="te-encontrare.jpg" alt="Portada de la miniserie Te encontraré" class="imagenAl50">
+
+    <!-- Texto descriptivo actualizado -->
+    <p>La imagen que se muestra es la portada de la miniserie "Te encontraré", continuando con la temática de nuestras series favoritas.</p>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+/* 1. TAMAÑO BASE PARA PANTALLAS GRANDES */
+body {
+    font-size: 22px; /* Tamaño por defecto para el body */
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+/* 2. TAMAÑOS RELATIVOS (em) */
+h1 {
+    font-size: 2em; /* Mide el doble del body (2 x 22 = 44px) */
+    text-align: center;
+}
+
+p {
+    font-size: 1em;
+    background-color: red; /* Rojo River */
+    color: white; /* Letras blancas para que resalten */
+    padding: 10px;
+    border-radius: 4px;
+}
+
+/* 3. MEDIA QUERY: El control de medio para pantallas más chicas */
+/* Cuando la ventana mida 768 píxeles o menos, se aplican estas reglas: */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Achicamos el tamaño base */
+    }
+    
+    /* ¡No hace falta tocar el h1 ni el p! 
+       Como el body ahora es 14px, el h1 (2em) pasará automáticamente a medir 28px
+       y el p (1em) pasará a medir 14px. Todo se acomoda solo. */
+}
