@@ -1,18 +1,16 @@
-/* Estilos para todos los títulos h1 */
 h1 {
-    background-color: black; /* Color de fondo verde agua/cian */
-    color: yellow; /* Color de texto azul oscuro (navy) */
-    text-align: center; /* Texto centrado */
+    background-color: black; 
+    color: yellow; 
+    text-align: center; 
     font-family: "Times New Roman", Times, serif;
     padding: 10px;
 }
 
-/* Estilos para todos los párrafos */
 p {
-    color: goldenrod; /* Color de texto azul medio */
-    font-style: italic; /* Texto en cursiva */
+    color: goldenrod; 
+    font-style: italic; 
     font-family: "Times New Roman", Times, serif;
-    border-top: 2px solid goldenrod; /* Línea superior */
-    border-bottom: 2px solid goldenrod; /* Línea inferior */
-    padding: 10px 0; /* Espaciado arriba y abajo del texto para separarlo de las líneas */
+    border-top: 2px solid goldenrod; 
+    border-bottom: 2px solid goldenrod; 
+    padding: 10px 0; 
 }
