@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4 - Menú Desplegable</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu-principal {
+            list-style: none;
+            background-color: #022d6e;
+            display: inline-flex; 
+        }
+
+        .menu-principal > li {
+            position: relative;
+        }
+
+        .menu-principal > li > a {
+            display: block;
+            padding: 20px 50px; 
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 15px;
+            text-transform: uppercase;
+        }
+
+        .menu-principal > li:hover {
+            background-color: #1e375d;
+        }
+
+        .sub-menu {
+            list-style: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #1e375d;
+            width: 100%; 
+            display: none;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+        }
+
+        .sub-menu li a {
+            display: block;
+            padding: 10px 8px;
+            color: white;
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            word-wrap: break-word; 
+        }
+
+        .sub-menu li a:hover {
+            background-color: #3d629b;
+        }
+
+        .menu-principal > li:hover .sub-menu {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul class="menu-principal">
+            <li>
+                <a href="#">HTML</a>
+                <ul class="sub-menu">
+                    <li><a href="../../../html/ejercicios01/index.html">Preguntas</a></li>
+                    <li><a href="../../../html/ejercicios02/index.html">Calendario</a></li>
+                    <li><a href="../../../html/ejercicios03/index.html">Formulario</a></li>
+                    <li><a href="../../../html/ejercicios04/index.html">Indice</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">CSS</a>
+                <ul class="sub-menu">
+                    <li><a href="../../../css/css1/01EstilosEnHead/index.html">Estilos en Head</a></li>
+                    <li><a href="../../../css/css1/02LectoresDeClase/index.html">Lectores de Clase</a></li>
+                    <li><a href="../../../css/css1/03EstilosEnUnFile/index.html">Estilos en un File</a></li>
+                    <li><a href="../../../css/css1/04TamanoDeLetras/index.html">Tamano de letras</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#">JScript</a></li>
+            <li><a href="#">Especiales</a></li>
+            <li><a href="#">PHP</a></li>
+        </ul>
+    </nav>
+
+</body>
+</html>

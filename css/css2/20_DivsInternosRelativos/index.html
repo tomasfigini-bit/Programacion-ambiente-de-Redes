@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20 - Divs Internos Relativos</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(129, 1, 198); 
+        }
+
+        body {
+            margin: 0 50px; 
+            padding: 0;
+            background-color: #fc0202; 
+            min-height: 100vh;
+        }
+
+        h2 {
+            margin: 0;
+            padding: 10px 0 10px 10px; 
+        }
+
+        div.contenedorRelativoClase1 {
+            position: relative;
+            margin-left: 0%;
+            margin-top: 10px;
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+            padding: 10px;
+        }
+
+        div.contenedorRelativoClase2 {
+            position: relative;
+            margin-left: 20%;
+            margin-top: 20px;
+            background-color: rgb(255, 255, 255);
+            color: black;
+            padding: 10px;
+        }
+
+        .anchoCorto { width: 40%; }
+        .anchoMedio { width: 50%; }
+
+        div.contenedorRelativoClase3 {
+            position: relative;
+            margin-left: 30%;
+            margin-top: 20px;
+            background-color: rgb(129, 1, 198);
+            color: black;
+            padding: 10px;
+            width: 40%;
+            height: 100px;
+            overflow-y: auto;
+            border-bottom: 20px solid rgb(129, 1, 198);
+        }
+
+        div.paraVentanaModal {
+            position: fixed;
+            width: 50%;
+            height: 60%;
+            top: 20%;
+            left: 25%;
+            background-color: #000080;
+            color: #ffffff; 
+            opacity: 0.5;
+            overflow-y: auto;
+            visibility: visible;
+            z-index: 10;
+            padding: 20px;
+        }
+
+        .contenedorImagen img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="paraVentanaModal">
+        Partido de vuelta<br>Partido de vuelta<br>Partido de vuelta<br>
+        Partido de vuelta<br>Partido de vuelta<br>Partido de vuelta<br>
+        Partido de vuelta<br>Partido de vuelta<br>Partido de vuelta<br>
+        Partido de vuelta<br>Partido de vuelta
+    </div>
+
+    <h2>River Plate vs Atletico Mineiro</h2>
+    
+    <div class="contenedorRelativoClase1">Martes 29 de Octubre del 2024</div>
+    <div class="contenedorRelativoClase1">Martes 29 de Octubre del 2024</div>
+    
+    <div class="contenedorRelativoClase2 anchoCorto">
+        Ese partido salio 0-0<br>Ese partido salio 0-0<br>
+        Ese partido salio 0-0<br>Ese partido salio 0-0<br>
+        Ese partido salio 0-0<br>Ese partido salio 0-0
+    </div>
+    
+    <div class="contenedorRelativoClase3">
+        Recibimiento historico<br>
+        Algo nunca antes visto<br>Algo nunca antes visto<br>
+        Algo nunca antes visto<br>Algo nunca antes visto
+    </div>
+
+    <div class="contenedorRelativoClase2 anchoMedio">
+        Ese partido salio 0-0<br>Ese partido salio 0-0<br>
+        Ese partido salio 0-0<br>Ese partido salio 0-0<br>
+        Ese partido salio 0-0<br>Ese partido salio 0-0<br>
+        Ese partido salio 0-0<br>Ese partido salio 0-0<br>
+        Ese partido salio 0-0
+    </div>
+
+    <div class="contenedorRelativoClase2 anchoMedio contenedorImagen">
+        <img src="monumentalriver-jpg" alt="Estadio Monumental">
+    </div>
+
+</body>
+</html>

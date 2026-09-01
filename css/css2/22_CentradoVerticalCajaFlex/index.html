@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22 - Centrado Vertical Caja Flex</title>
+    <style>
+    
+        html {
+            background-color: white;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        body {
+            background-color: red;     
+            margin: 0 40px;            
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;   
+            align-items: center;       
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+        }
+
+        .galeria {
+            display: flex;
+            flex-wrap: wrap;         
+            justify-content: center; 
+            gap: 25px;               
+            max-width: 95%;
+            padding: 20px;
+        }
+
+        .galeria img {
+            width: 440px;            
+            height: 350px;           
+            object-fit: cover;       
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="galeria">
+        <img src="rivercampeon" alt="rivercampeon 1">
+        <img src="rivercampeon" alt="rivercampeon 2">
+        <img src="rivercampeon" alt="rivercampeon 3">
+    </div>
+
+</body>
+</html>
