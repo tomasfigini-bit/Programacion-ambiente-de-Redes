@@ -32,7 +32,6 @@
     <h2>Asignaremos valor a la variable global desde adentro de una funcion:</h2>
 
     <div class="contenedor-botones">
-        <!-- El atributo title crea el tooltip al hacer hover -->
         <button onclick="asignacionConDeclaracion()" title="Inicializa variable global desde adentro de una funcion con declaracion var">
             Asignacion con declaracion ( declaracion + asignacion )
         </button>
@@ -47,10 +46,7 @@
     </div>
 
     <script>
-        // 1. Declaración de la variable global sin asignación
         var variableGlobal;
-
-        // Alertas iniciales
         alert("Una variableGlobal fue declarada pero no asignada:\nvar variableGlobal;");
         alert("El valor de variableGlobal es: " + variableGlobal);
         alert("El tipo de variableGlobal es: " + typeof variableGlobal);

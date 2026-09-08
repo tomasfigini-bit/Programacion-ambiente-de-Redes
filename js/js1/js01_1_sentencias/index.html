@@ -7,10 +7,8 @@
 </head>
 <body>
 
-    <!-- Posición 1: Escritura directa en HTML -->
     <h3>Texto1 escrito directamente en HTML</h3>
 
-    <!-- Posición 2 y 3: Escritura con JS y primer alerta modal -->
     <script>
         document.write('<h3>Texto2. Mensaje escrito desde java script utilizando el metodo write().</h3>');
         document.write('<p>No pisa al documento porque aún no termino el flujo de escritura del navegador</p>');
@@ -18,10 +16,8 @@
         alert('Alert 1. Este mensaje de alerta es escrito desde un script del documento. Esta ventana de alerta es modal lo que significa que el flujo de escritura del documento se interrumpe hasta el evento de aceptacion.El navegador muestra estas ventana con anterioridad a la interpretación o renderizacion del documento');
     </script>
 
-    <!-- Posición 4: Escritura en HTML tras el primer alert -->
     <h3>Texto 4 escrito en HTML escrito después de presentar el alert("3")</h3>
 
-    <!-- Posición 5 y 6: Segunda escritura con JS y alerta final -->
     <script>
         document.write('<h3>Texto5. Otra escritura con metodo write() aplicado al documento.</h3>');
         document.write('<p>El texto escrito con write no pisa al documento porque aún no termino el flujo de escritura del navegador</p>');

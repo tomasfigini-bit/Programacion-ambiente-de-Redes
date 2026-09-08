@@ -23,25 +23,19 @@
     <h2>Variables Multidimensionales</h2>
     <h3>Array de indice numerico</h3>
 
-    <!-- Contenedor donde se inyectarán los resultados -->
     <div id="resultado"></div>
 
     <script>
-        // 1. Inicialización del arreglo con dos elementos predefinidos
         let arregloEquipos = ["RiverPlate", "Arsenal"];
 
-        // 2. Alerta inicial solicitando la carga del tercer elemento
         alert("El arregloEquipos ya tiene dos elementos asignados por programa\n(RiverPlate y Arsenal), agregue el tercer elemento con indice numerico");
 
-        // 3. Captura del nuevo elemento mediante prompt
         let tercerElemento = prompt("");
-        
-        // 4. Asignación del nuevo elemento forzando el índice numérico 2
+
         if (tercerElemento !== null) {
             arregloEquipos[2] = tercerElemento;
         }
 
-        // 5. Inserción de los datos en el documento HTML
         let contenedor = document.getElementById("resultado");
         contenedor.innerHTML = 
             "<strong>Tipo para arregloEquipos: </strong>" + typeof arregloEquipos + "<br>" +
