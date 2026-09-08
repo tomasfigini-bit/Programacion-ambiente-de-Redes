@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alcance de Variables</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h2 {
+            font-weight: normal;
+        }
+        .contenedor-botones {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            flex: 1;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Asignaremos valor a la variable global desde adentro de una funcion:</h2>
+
+    <div class="contenedor-botones">
+        <!-- El atributo title crea el tooltip al hacer hover -->
+        <button onclick="asignacionConDeclaracion()" title="Inicializa variable global desde adentro de una funcion con declaracion var">
+            Asignacion con declaracion ( declaracion + asignacion )
+        </button>
+        
+        <button onclick="asignacionForzada()" title="Inicializa variable glogal desde adentro de una funcion sin declaracion var">
+            Asignacion forzada sin declaracion
+        </button>
+        
+        <button onclick="mostrarVariableGlobal()">
+            Muestra variable global
+        </button>
+    </div>
+
+    <script>
+        // 1. Declaración de la variable global sin asignación
+        var variableGlobal;
+
+        // Alertas iniciales
+        alert("Una variableGlobal fue declarada pero no asignada:\nvar variableGlobal;");
+        alert("El valor de variableGlobal es: " + variableGlobal);
+        alert("El tipo de variableGlobal es: " + typeof variableGlobal);
+
+        function asignacionConDeclaracion() {
+            let valor = prompt("Ingrese valor para la variable global:");
+            if (valor !== null) {
+                var variableGlobal = valor; 
+                alert("El valor de variable local ingresada es: " + variableGlobal);
+                alert("El tipo de la variable local ingresada es: " + typeof variableGlobal);
+            }
+        }
+
+        function asignacionForzada() {
+            let valor = prompt("Ingrese valor para la variable global:");
+            if (valor !== null) {
+                variableGlobal = valor; 
+                alert("El valor de variableGlobal es: " + variableGlobal);
+                alert("El tipo de variableGlobal es: " + typeof variableGlobal);
+            }
+        }
+
+        function mostrarVariableGlobal() {
+            if (typeof variableGlobal === "undefined") {
+                alert("La variable global no ha sido asignada");
+            } else {
+                alert("valor de la variableGlobal:" + variableGlobal);
+                alert("tipo de la variableGlobal:" + typeof variableGlobal);
+            }
+        }
+    </script>
+
+</body>
+</html>

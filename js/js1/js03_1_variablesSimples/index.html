@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables Simples</title>
+    <style>
+        /* Estilo básico para emular el recuadro celeste del video */
+        #resultado {
+            background-color: rgb(141, 218, 244);
+            border: 1px solid black;
+            min-height: 80px;
+            padding: 15px;
+            margin-top: 10px;
+            font-family: monospace;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Ejercicio js03_1_variablesSimples</h2>
+
+    <!-- Botones que ejecutan las funciones de asignación -->
+    <button onclick="ejecutarZ()">var z;</button>
+    <button onclick="ejecutarQ()">let q;</button>
+    <button onclick="ejecutarA()">var a=1;</button>
+    <button onclick="ejecutarB()">var b="1";</button>
+    <button onclick="ejecutarC()">var c=2;</button>
+    <button onclick="ejecutarSuma1()">suma1=a+b;</button>
+    <button onclick="ejecutarSuma2()">suma2=a+c;</button>
+
+    <!-- Contenedor donde se mostrarán los resultados -->
+    <div id="resultado">
+    </div>
+
+    <script>
+        // Declaración de variables globales
+        var z;
+        let q;
+        var a = 1;
+        var b = "1";
+        var c = 2;
+
+        // Función auxiliar para imprimir en el div celeste
+        function mostrar(nombreVariable, valorVariable, tipoVariable) {
+            document.getElementById('resultado').innerHTML = 
+                '<strong>Valor de ' + nombreVariable + ':</strong> ' + valorVariable + '<br><br>' +
+                '<strong>Tipo de ' + nombreVariable + ':</strong> ' + tipoVariable;
+        }
+
+        // Funciones asociadas a cada botón
+        function ejecutarZ() {
+            z = "otro valor para z";
+            mostrar('z', z, typeof z);
+        }
+
+        function ejecutarQ() {
+            q = "Nuevo valor para q";
+            mostrar('q', q, typeof q);
+        }
+
+        function ejecutarA() {
+            a = 1;
+            mostrar('a', a, typeof a);
+        }
+
+        function ejecutarB() {
+            b = "1";
+            mostrar('b', b, typeof b);
+        }
+
+        function ejecutarC() {
+            c = 2;
+            mostrar('c', c, typeof c);
+        }
+
+        function ejecutarSuma1() {
+            let suma1 = a + b;
+            mostrar('suma1', suma1, typeof suma1);
+        }
+
+        function ejecutarSuma2() {
+            let suma2 = a + c;
+            mostrar('suma2', suma2, typeof suma2);
+        }
+    </script>
+
+</body>
+</html>
