@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIO ABM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 10px;
+            background-color: #f4f4f4;
+            color: #333;
+            word-wrap: break-word;
+        }
+
+        .texto-fondo {
+            color: #a0a0a0;
+            font-size: 0.85rem;
+            line-height: 1.2;
+            user-select: none;
+        }
+
+        .modal-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #ff0000;
+            border: 2px solid #9b0000;
+            padding: 25px;
+            width: 480px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .modal-container h2 {
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 20px;
+            color: #ffffff;
+            font-size: 1.6rem;
+            letter-spacing: 1px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .campo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .campo label {
+            width: 110px;
+            background-color: #ff3c3c;
+            padding: 4px 8px;
+            font-size: 0.9rem;
+            border: 1px solid #ff0000;
+            font-weight: bold;
+        }
+
+        .campo input {
+            flex: 1;
+            padding: 4px;
+            border: 1px solid #7a7a7a;
+            font-size: 0.9rem;
+        }
+
+        .botones {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 25px;
+        }
+
+        .botones input[type="button"] {
+            padding: 5px 15px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            background-color: #efefef;
+            border: 1px solid #888;
+        }
+
+        .botones input[type="button"]:disabled {
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="texto-fondo">
+        River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate River Plate 
+    </div>
+
+    <div class="modal-container">
+        <h2>FORMULARIO ABM</h2>
+        
+        <form id="formABM" action="" method="get" target="_blank">
+            <div class="campo">
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" onkeyup="validarFormulario()">
+            </div>
+
+            <div class="campo">
+                <label for="nombres">Nombres:</label>
+                <input type="text" id="nombres" name="nombres" onkeyup="validarFormulario()">
+            </div>
+
+            <div class="campo">
+                <label for="saldo">Saldo:</label>
+                <input type="text" id="saldo" name="saldo" onkeyup="validarFormulario()">
+            </div>
+
+            <div class="botones">
+                <input type="button" id="btnBlanquear" value="Blanquear" disabled onclick="blanquearFormulario()">
+                <input type="button" id="btnAlta" value="Alta" disabled onclick="enviarAccion('alta.html')">
+                <input type="button" id="btnModi" value="Modi" disabled onclick="enviarAccion('modi.html')">
+                <input type="button" id="btnBaja" value="Baja" disabled onclick="enviarAccion('baja.html')">
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function validarFormulario() {
+            let apellido = document.getElementById('apellido').value.trim();
+            let nombres = document.getElementById('nombres').value.trim();
+            let saldoTexto = document.getElementById('saldo').value.trim();
+            let saldoNum = Number(saldoTexto);
+
+            // Activar "Blanquear" si al menos un campo tiene texto
+            let hayTexto = apellido !== "" || nombres !== "" || saldoTexto !== "";
+            document.getElementById('btnBlanquear').disabled = !hayTexto;
+
+            // Validar campos para Alta, Modi y Baja
+            let esSaldoValido = saldoTexto !== "" && !isNaN(saldoNum) && Number.isInteger(saldoNum) && saldoNum >= 100 && saldoNum <= 1000;
+            let esFormularioValido = apellido !== "" && nombres !== "" && esSaldoValido;
+
+            // Habilitar o deshabilitar botones ABM
+            document.getElementById('btnAlta').disabled = !esFormularioValido;
+            document.getElementById('btnModi').disabled = !esFormularioValido;
+            document.getElementById('btnBaja').disabled = !esFormularioValido;
+        }
+
+        function enviarAccion(url) {
+            let form = document.getElementById('formABM');
+            form.action = url;
+            form.submit();
+        }
+
+        function blanquearFormulario() {
+            document.getElementById('formABM').reset();
+            validarFormulario();
+        }
+    </script>
+
+</body>
+</html>

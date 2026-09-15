@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js06_7_validacionConKeyUp</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #ffffff;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .formulario-container {
+            background-color: #73bed7;
+            border: 1px solid #90b6c5;
+            padding: 20px;
+            width: 450px;
+            box-sizing: border-box;
+        }
+
+        .campo {
+            margin-bottom: 15px;
+        }
+
+        .campo label {
+            display: block;
+            font-size: 0.85rem;
+            margin-bottom: 5px;
+        }
+
+        .campo input {
+            width: 220px;
+            padding: 3px;
+            border: 1px solid #7a7a7a;
+            box-sizing: border-box;
+        }
+
+        .botones {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .botones input[type="submit"], 
+        .botones input[type="reset"] {
+            flex: 1;
+            padding: 6px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            background-color: #efefef;
+            border: 1px solid #7a7a7a;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Ejer validación de un INPUT de formulario en el evento de onKeyUp</h2>
+
+    <form action="respuesta.html" method="get" class="formulario-container">
+        <div class="campo">
+            <label for="diaDelMes">Ingrese el día del mes:</label>
+            <input type="text" id="diaDelMes" name="diaDelMes" onkeyup="validarDia(this)">
+        </div>
+
+        <div class="campo">
+            <label for="mes">Ingrese el mes:</label>
+            <input type="text" id="mes" name="mes" onkeyup="validarMes(this)">
+        </div>
+
+        <div class="botones">
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Reset">
+        </div>
+    </form>
+
+    <script>
+        function validarDia(input) {
+            let valor = input.value.trim();
+            if (valor === "") return;
+
+            let num = Number(valor);
+            if (isNaN(num) || !Number.isInteger(num) || num < 1 || num > 31) {
+                alert("El valor debe estar entre 1 y 31");
+                input.value = "";
+            }
+        }
+
+        function validarMes(input) {
+            let valor = input.value.trim();
+            if (valor === "") return;
+
+            let num = Number(valor);
+            if (isNaN(num) || !Number.isInteger(num) || num < 1 || num > 12) {
+                alert("El valor debe estar entre 1 y 12");
+                input.value = "";
+            }
+        }
+    </script>
+
+</body>
+</html>

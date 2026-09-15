@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js09_creacion_objetos</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-color: #4613a5; /* Fondo amarillo claro de la consigna */
+            font-family: Arial, sans-serif;
+            position: relative;
+        }
+
+        /* Panel de botones superior izquierdo */
+        .panel-botones {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            display: flex;
+            gap: 5px;
+            z-index: 10;
+        }
+
+        .panel-botones button {
+            padding: 2px 8px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            border: 1px solid #777;
+            background-color: #f0f0f0;
+            border-radius: 2px;
+        }
+
+        .panel-botones button:hover {
+            background-color: #e0e0e0;
+        }
+
+        /* Contenedor principal centrado */
+        #contenedor {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 380px;
+            height: 380px;
+            background-color: #cf1717; /* Color celeste de fondo del contenedor */
+            border: 1px solid #000;
+            padding: 15px;
+            overflow-y: auto; /* Permite scroll cuando se agregan varios elementos */
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        /* Estilo de los elementos creados dinámicamente */
+        .elemento-creado {
+            background-color: #ffffff;
+            border: 1px solid #000;
+            padding: 10px 15px;
+            width: 100%;
+        }
+
+        .elemento-creado h1 {
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Botones de acción -->
+    <div class="panel-botones">
+        <button onclick="crearObjeto()">Crear</button>
+        <button onclick="limpiarObjetos()">Limpiar</button>
+        <button onclick="mostrarInfo()">Info</button>
+    </div>
+
+    <!-- Contenedor dinámico -->
+    <div id="contenedor"></div>
+
+    <script>
+        let contador = 0;
+        const contenedor = document.getElementById('contenedor');
+
+        // Crea dinámicamente un nodo div y lo añade al contenedor
+        function crearObjeto() {
+            const nuevoDiv = document.createElement('div');
+            nuevoDiv.className = 'elemento-creado';
+            nuevoDiv.innerHTML = `<h1>Elemento creado: ${contador}</h1>`;
+            
+            contenedor.appendChild(nuevoDiv);
+            contador++;
+        }
+
+        // Remueve todos los nodos hijos del contenedor y reinicia el contador
+        function limpiarObjetos() {
+            while (contenedor.firstChild) {
+                contenedor.removeChild(contenedor.firstChild);
+            }
+            contador = 0;
+        }
+
+        // Muestra la longitud de childNodes y el innerHTML de cada elemento
+        function mostrarInfo() {
+            const hijos = contenedor.children;
+            alert(`longitud del childNodes: ${hijos.length}`);
+
+            for (let i = 0; i < hijos.length; i++) {
+                alert(`índice: ${i} innerHTML: ${hijos[i].innerHTML}`);
+            }
+        }
+    </script>
+
+</body>
+</html>

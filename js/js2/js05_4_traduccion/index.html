@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traducción de Título</title>
+    <style>
+        body {
+            font-family: serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            font-size: 48px;
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="tituloPrincipal">RIVER ES EL EQUIPO MAS GRANDE DEL MUNDO</h1>
+
+    <script>
+        let idiomaNavegador = window.navigator.language;
+
+        let idiomaBase = idiomaNavegador.substr(0, 2);
+
+        if (idiomaBase === "en") {
+            document.getElementById("tituloPrincipal").innerHTML = "RIVER IS THE BIGGEST TEAM IN THE WORLD";
+        }
+    </script>
+
+</body>
+</html>
